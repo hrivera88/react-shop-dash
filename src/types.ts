@@ -26,3 +26,32 @@ export interface AgeDistributionBarChartData {
 		count: number;
 	}>;
 }
+
+export type GenderTotal = Record<string, { gender: string; total: number }>;
+export interface PurchaseByGenderBarChartData {
+	data: Array<{
+		gender: string;
+		total: number;
+	}>;
+}
+
+export type CategoryAccumulator = Record<string, number>;
+export interface CategoryCountBarChartData {
+	data: Array<{
+		id: string;
+		label: string;
+		value: number;
+	}>;
+}
+
+export type SeasonAmounts = Record<string, number>;
+export type CategorySeasonTotals = Record<string, SeasonAmounts>;
+export interface SeasonTotalLineChartData {
+	data: Array<{
+		id: string;
+		data: Array<{
+			x: string;
+			y: number;
+		}>;
+	}>;
+}
