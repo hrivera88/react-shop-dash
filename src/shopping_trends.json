@@ -2,7 +2,7 @@
 	{
 		"Customer ID": "3647",
 		"Age": "69",
-		"Gender": "Female",
+		"Gender": "Male",
 		"Item Purchased": "Jewelry",
 		"Category": "Accessories",
 		"Purchase Amount (USD)": "68",
@@ -65,7 +65,7 @@
 	{
 		"Customer ID": "3650",
 		"Age": "68",
-		"Gender": "Female",
+		"Gender": "Male",
 		"Item Purchased": "Skirt",
 		"Category": "Clothing",
 		"Purchase Amount (USD)": "57",
@@ -128,7 +128,7 @@
 	{
 		"Customer ID": "3653",
 		"Age": "27",
-		"Gender": "Female",
+		"Gender": "Male",
 		"Item Purchased": "Handbag",
 		"Category": "Accessories",
 		"Purchase Amount (USD)": "29",
@@ -233,7 +233,7 @@
 	{
 		"Customer ID": "3658",
 		"Age": "58",
-		"Gender": "Female",
+		"Gender": "Male",
 		"Item Purchased": "Shoes",
 		"Category": "Footwear",
 		"Purchase Amount (USD)": "82",
@@ -359,7 +359,7 @@
 	{
 		"Customer ID": "3664",
 		"Age": "65",
-		"Gender": "Female",
+		"Gender": "Male",
 		"Item Purchased": "Backpack",
 		"Category": "Accessories",
 		"Purchase Amount (USD)": "59",
@@ -527,7 +527,7 @@
 	{
 		"Customer ID": "3672",
 		"Age": "62",
-		"Gender": "Female",
+		"Gender": "Male",
 		"Item Purchased": "Handbag",
 		"Category": "Accessories",
 		"Purchase Amount (USD)": "66",
@@ -674,7 +674,7 @@
 	{
 		"Customer ID": "3679",
 		"Age": "56",
-		"Gender": "Female",
+		"Gender": "Male",
 		"Item Purchased": "Shirt",
 		"Category": "Clothing",
 		"Purchase Amount (USD)": "45",
@@ -863,7 +863,7 @@
 	{
 		"Customer ID": "3688",
 		"Age": "34",
-		"Gender": "Female",
+		"Gender": "Male",
 		"Item Purchased": "Shirt",
 		"Category": "Clothing",
 		"Purchase Amount (USD)": "44",
@@ -947,7 +947,7 @@
 	{
 		"Customer ID": "3692",
 		"Age": "63",
-		"Gender": "Female",
+		"Gender": "Male",
 		"Item Purchased": "Sandals",
 		"Category": "Footwear",
 		"Purchase Amount (USD)": "21",
@@ -1052,7 +1052,7 @@
 	{
 		"Customer ID": "3697",
 		"Age": "63",
-		"Gender": "Female",
+		"Gender": "Male",
 		"Item Purchased": "Blouse",
 		"Category": "Clothing",
 		"Purchase Amount (USD)": "48",
@@ -1073,7 +1073,7 @@
 	{
 		"Customer ID": "3698",
 		"Age": "55",
-		"Gender": "Female",
+		"Gender": "Male",
 		"Item Purchased": "Hoodie",
 		"Category": "Clothing",
 		"Purchase Amount (USD)": "66",
@@ -1094,7 +1094,7 @@
 	{
 		"Customer ID": "3699",
 		"Age": "25",
-		"Gender": "Female",
+		"Gender": "Male",
 		"Item Purchased": "Skirt",
 		"Category": "Clothing",
 		"Purchase Amount (USD)": "54",
@@ -1220,7 +1220,7 @@
 	{
 		"Customer ID": "3705",
 		"Age": "68",
-		"Gender": "Female",
+		"Gender": "Male",
 		"Item Purchased": "Sunglasses",
 		"Category": "Accessories",
 		"Purchase Amount (USD)": "61",
@@ -1325,7 +1325,7 @@
 	{
 		"Customer ID": "3710",
 		"Age": "31",
-		"Gender": "Female",
+		"Gender": "Male",
 		"Item Purchased": "Socks",
 		"Category": "Clothing",
 		"Purchase Amount (USD)": "43",
@@ -1409,7 +1409,7 @@
 	{
 		"Customer ID": "3714",
 		"Age": "49",
-		"Gender": "Female",
+		"Gender": "Male",
 		"Item Purchased": "Shoes",
 		"Category": "Footwear",
 		"Purchase Amount (USD)": "87",
@@ -1535,7 +1535,7 @@
 	{
 		"Customer ID": "3720",
 		"Age": "20",
-		"Gender": "Female",
+		"Gender": "Male",
 		"Item Purchased": "Pants",
 		"Category": "Clothing",
 		"Purchase Amount (USD)": "91",
@@ -1598,7 +1598,7 @@
 	{
 		"Customer ID": "3723",
 		"Age": "23",
-		"Gender": "Female",
+		"Gender": "Male",
 		"Item Purchased": "Jacket",
 		"Category": "Outerwear",
 		"Purchase Amount (USD)": "34",
@@ -1892,7 +1892,7 @@
 	{
 		"Customer ID": "3737",
 		"Age": "42",
-		"Gender": "Female",
+		"Gender": "Male",
 		"Item Purchased": "Jeans",
 		"Category": "Clothing",
 		"Purchase Amount (USD)": "56",
@@ -2081,7 +2081,7 @@
 	{
 		"Customer ID": "3746",
 		"Age": "60",
-		"Gender": "Female",
+		"Gender": "Male",
 		"Item Purchased": "Socks",
 		"Category": "Clothing",
 		"Purchase Amount (USD)": "41",
@@ -2207,7 +2207,7 @@
 	{
 		"Customer ID": "3752",
 		"Age": "36",
-		"Gender": "Female",
+		"Gender": "Male",
 		"Item Purchased": "Jewelry",
 		"Category": "Accessories",
 		"Purchase Amount (USD)": "97",
@@ -2417,7 +2417,7 @@
 	{
 		"Customer ID": "3762",
 		"Age": "60",
-		"Gender": "Female",
+		"Gender": "Male",
 		"Item Purchased": "Backpack",
 		"Category": "Accessories",
 		"Purchase Amount (USD)": "30",
@@ -2606,7 +2606,7 @@
 	{
 		"Customer ID": "3771",
 		"Age": "23",
-		"Gender": "Female",
+		"Gender": "Male",
 		"Item Purchased": "Pants",
 		"Category": "Clothing",
 		"Purchase Amount (USD)": "42",
@@ -2627,7 +2627,7 @@
 	{
 		"Customer ID": "3772",
 		"Age": "21",
-		"Gender": "Female",
+		"Gender": "Male",
 		"Item Purchased": "T-shirt",
 		"Category": "Clothing",
 		"Purchase Amount (USD)": "86",
@@ -2963,7 +2963,7 @@
 	{
 		"Customer ID": "3788",
 		"Age": "37",
-		"Gender": "Female",
+		"Gender": "Male",
 		"Item Purchased": "Blouse",
 		"Category": "Clothing",
 		"Purchase Amount (USD)": "80",
@@ -3152,7 +3152,7 @@
 	{
 		"Customer ID": "3797",
 		"Age": "40",
-		"Gender": "Female",
+		"Gender": "Male",
 		"Item Purchased": "Shorts",
 		"Category": "Clothing",
 		"Purchase Amount (USD)": "81",
@@ -3341,7 +3341,7 @@
 	{
 		"Customer ID": "3806",
 		"Age": "48",
-		"Gender": "Female",
+		"Gender": "Male",
 		"Item Purchased": "Scarf",
 		"Category": "Accessories",
 		"Purchase Amount (USD)": "57",
@@ -3677,7 +3677,7 @@
 	{
 		"Customer ID": "3822",
 		"Age": "20",
-		"Gender": "Female",
+		"Gender": "Male",
 		"Item Purchased": "Sneakers",
 		"Category": "Footwear",
 		"Purchase Amount (USD)": "48",
@@ -4328,7 +4328,7 @@
 	{
 		"Customer ID": "3853",
 		"Age": "65",
-		"Gender": "Female",
+		"Gender": "Male",
 		"Item Purchased": "Hat",
 		"Category": "Accessories",
 		"Purchase Amount (USD)": "79",
@@ -4664,7 +4664,7 @@
 	{
 		"Customer ID": "3869",
 		"Age": "18",
-		"Gender": "Female",
+		"Gender": "Male",
 		"Item Purchased": "Dress",
 		"Category": "Clothing",
 		"Purchase Amount (USD)": "29",
@@ -4979,7 +4979,7 @@
 	{
 		"Customer ID": "3884",
 		"Age": "34",
-		"Gender": "Female",
+		"Gender": "Male",
 		"Item Purchased": "Hat",
 		"Category": "Accessories",
 		"Purchase Amount (USD)": "38",
