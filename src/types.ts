@@ -55,8 +55,8 @@ export interface SeasonTotalLineChartData {
 		}>;
 	}>;
 }
-export type PurchaseAmountByState = Record<string, number>;
 
+export type PurchaseAmountByState = Record<string, number>;
 interface ChloroplethData {
 	id: string;
 	value: number;
@@ -82,4 +82,13 @@ interface GeoJSONData {
 export interface PurchaseAmountByStateChartData {
 	data: ChloroplethData[];
 	geoJSON: GeoJSONData;
+}
+
+export interface ReviewRatingPurchaseImpactChartData {
+	id: string;
+	data: Array<{
+		id: string;
+		x: number;
+		y: number;
+	}>;
 }
