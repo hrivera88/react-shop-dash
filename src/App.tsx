@@ -8,6 +8,7 @@ import type {
 	CategorySeasonTotals,
 	SeasonAmounts,
 	PurchaseAmountByState,
+	ShippingTypeAccumulator,
 } from './types';
 import AgeDistributionBarChart from './AgeDistributionBarChart/AgeDistributionBarChart';
 import PurchaseByGenderBarChart from './PurchaseByGenderBarChart/PurchaseByGenderBarChart';
@@ -15,6 +16,7 @@ import CategoryCountPieChart from './CategoryCountPieChart/CategoryCountPieChart
 import SeasonTotalLineChart from './SeasonTotalLineChart/SeasonTotalLineChart';
 import PurchaseAmountByStateChart from './PurchaseAmountByStateChart/PurchaseAmountByStateChart';
 import ReviewRatingPurchaseImpactChart from './ReviewRatingPurchaseImpactChart/ReviewRatingPurchaseImpactChart';
+import ShippingPreferencePieChart from './ShippingPreferencePieChart/ShippingPreferencePieChart';
 
 // Count the number of customers in each Age group
 const ageDistribution = jsonData.reduce(
@@ -130,6 +132,21 @@ const reviewRatingScatterData = jsonData.map((customer) => ({
 	id: customer['Customer ID'],
 }));
 
+// Aggregate Data for Shipping Pie Chart
+const shippingPreferencePieData = jsonData.reduce(
+	(acc: ShippingTypeAccumulator, value) => {
+		const shippingType = value['Shipping Type'];
+		if (acc[shippingType] === undefined) {
+			acc[shippingType] = { id: shippingType, label: shippingType, value: 1 };
+		} else {
+			acc[shippingType].value += 1;
+		}
+		return acc;
+	},
+	{}
+);
+const formattedShippingPieData = Object.values(shippingPreferencePieData);
+
 const App: React.FC = () => {
 	return (
 		<>
@@ -160,6 +177,16 @@ const App: React.FC = () => {
 							</h2>
 							<div className="w-full text-slate-600 h-80">
 								<CategoryCountPieChart data={categoryCountPieChartData} />
+							</div>
+						</div>
+					</div>
+					<div className="w-1/3 rounded drop-shadow">
+						<div className="p-2 w-full rounded bg-white drop-shadow">
+							<h2 className="font-bold text-slate-600">
+								Shipping Type Preferences
+							</h2>
+							<div className="w-full text-slate-600 h-80">
+								<ShippingPreferencePieChart data={formattedShippingPieData} />
 							</div>
 						</div>
 					</div>
