@@ -14,6 +14,7 @@ import PurchaseByGenderBarChart from './PurchaseByGenderBarChart/PurchaseByGende
 import CategoryCountPieChart from './CategoryCountPieChart/CategoryCountPieChart';
 import SeasonTotalLineChart from './SeasonTotalLineChart/SeasonTotalLineChart';
 import PurchaseAmountByStateChart from './PurchaseAmountByStateChart/PurchaseAmountByStateChart';
+import ReviewRatingPurchaseImpactChart from './ReviewRatingPurchaseImpactChart/ReviewRatingPurchaseImpactChart';
 
 // Count the number of customers in each Age group
 const ageDistribution = jsonData.reduce(
@@ -103,7 +104,7 @@ const seasonTotalLineChartData = Object.keys(
 	})),
 }));
 
-// Aggregate Data for Chloropleth Chart
+// Aggregate Data for Purchase Amount By State Chloropleth Chart
 const purchaseAmountsByState = jsonData.reduce(
 	(acc: PurchaseAmountByState, item) => {
 		const state = item.Location;
@@ -121,7 +122,14 @@ const purchaseAmountByStateData = Object.keys(purchaseAmountsByState).map(
 		value: purchaseAmountsByState[state],
 	})
 );
-console.log(purchaseAmountByStateData);
+
+// Transform Data for Review Raings Impact Scatter Plot
+const reviewRatingScatterData = jsonData.map((customer) => ({
+	x: parseFloat(customer['Review Rating']),
+	y: parseInt(customer['Purchase Amount (USD)'], 10),
+	id: customer['Customer ID'],
+}));
+
 const App: React.FC = () => {
 	return (
 		<>
@@ -138,7 +146,7 @@ const App: React.FC = () => {
 					<div className="w-1/3 rounded drop-shadow">
 						<div className="p-2 w-full rounded bg-white drop-shadow">
 							<h2 className="font-bold text-slate-600">
-								Purchase Amount Total By Gender
+								Purchase Amount (USD) Total By Gender
 							</h2>
 							<div className="w-full text-slate-600 h-80">
 								<PurchaseByGenderBarChart data={purchaseByGenderData} />
@@ -159,23 +167,38 @@ const App: React.FC = () => {
 				<div className="w-full px-4 py-2">
 					<div className="rounded bg-white drop-shadow p-2">
 						<h2 className="font-bold text-slate-600">
-							Category Purchase Amounts by Season
+							Category Purchase Amounts (USD) By Season
 						</h2>
-						<div className="w-full h-96">
+						<div className="w-full text-slate-600 h-96">
 							<SeasonTotalLineChart data={seasonTotalLineChartData} />
 						</div>
 					</div>
 				</div>
-				<div className="w-1/2 px-4 py-2">
-					<div className="rounded bg-white drop-shadow p-2">
-						<h2 className="font-bold text-slate-600">
-							Purchase Amounts (USD) By State
-						</h2>
-						<div className="w-full h-96">
-							<PurchaseAmountByStateChart
-								data={purchaseAmountByStateData}
-								geoJSON={stateData}
-							/>
+				<div className="flex flex-row w-full px-4 py-2 gap-2">
+					<div className="w-1/2">
+						<div className="rounded bg-white drop-shadow p-2">
+							<h2 className="font-bold text-slate-600">
+								Purchase Amounts (USD) By State
+							</h2>
+							<div className="w-full text-slate-600 h-96">
+								<PurchaseAmountByStateChart
+									data={purchaseAmountByStateData}
+									geoJSON={stateData}
+								/>
+							</div>
+						</div>
+					</div>
+					<div className="w-1/2">
+						<div className="rounded bg-white drop-shadow p-2">
+							<h2 className="font-bold text-slate-600">
+								Review Ratings Impact On Purchases
+							</h2>
+							<div className="w-full text-slate-600 h-96">
+								<ReviewRatingPurchaseImpactChart
+									id="Purchases"
+									data={reviewRatingScatterData}
+								/>
+							</div>
 						</div>
 					</div>
 				</div>
