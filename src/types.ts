@@ -92,3 +92,15 @@ export interface ReviewRatingPurchaseImpactChartData {
 		y: number;
 	}>;
 }
+
+export type ShippingTypeAccumulator = Record<
+	string,
+	{ id: string; label: string; value: number }
+>;
+export interface ShippingTypePreferencePieData {
+	data: Array<{
+		id: string;
+		label: string;
+		value: number;
+	}>;
+}
