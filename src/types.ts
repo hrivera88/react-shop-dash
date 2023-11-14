@@ -55,3 +55,31 @@ export interface SeasonTotalLineChartData {
 		}>;
 	}>;
 }
+export type PurchaseAmountByState = Record<string, number>;
+
+interface ChloroplethData {
+	id: string;
+	value: number;
+}
+type coordArray = number | number[] | coordArray[];
+interface GeoJSONData {
+	type: string;
+	features: Array<{
+		type: string;
+		properties: {
+			GEO_ID: string;
+			STATE: string;
+			NAME: string;
+			LSAD: string;
+			CENSUSAREA: number;
+		};
+		geometry: {
+			type: string;
+			coordinates: coordArray;
+		};
+	}>;
+}
+export interface PurchaseAmountByStateChartData {
+	data: ChloroplethData[];
+	geoJSON: GeoJSONData;
+}
