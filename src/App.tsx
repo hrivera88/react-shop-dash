@@ -1,16 +1,19 @@
 import React from 'react';
 import jsonData from './shopping_trends.json';
+import stateData from './state.json';
 import type {
 	ShoppingTrend,
 	GenderTotal,
 	CategoryAccumulator,
 	CategorySeasonTotals,
 	SeasonAmounts,
+	PurchaseAmountByState,
 } from './types';
 import AgeDistributionBarChart from './AgeDistributionBarChart/AgeDistributionBarChart';
 import PurchaseByGenderBarChart from './PurchaseByGenderBarChart/PurchaseByGenderBarChart';
 import CategoryCountPieChart from './CategoryCountPieChart/CategoryCountPieChart';
 import SeasonTotalLineChart from './SeasonTotalLineChart/SeasonTotalLineChart';
+import PurchaseAmountByStateChart from './PurchaseAmountByStateChart/PurchaseAmountByStateChart';
 
 // Count the number of customers in each Age group
 const ageDistribution = jsonData.reduce(
@@ -100,6 +103,25 @@ const seasonTotalLineChartData = Object.keys(
 	})),
 }));
 
+// Aggregate Data for Chloropleth Chart
+const purchaseAmountsByState = jsonData.reduce(
+	(acc: PurchaseAmountByState, item) => {
+		const state = item.Location;
+		const parsedAmount = parseFloat(item['Purchase Amount (USD)']);
+		const purchaseAmount = isNaN(parsedAmount) ? 0 : parsedAmount;
+		acc[state] =
+			(typeof acc[state] === 'number' ? acc[state] : 0) + purchaseAmount;
+		return acc;
+	},
+	{}
+);
+const purchaseAmountByStateData = Object.keys(purchaseAmountsByState).map(
+	(state) => ({
+		id: state,
+		value: purchaseAmountsByState[state],
+	})
+);
+console.log(purchaseAmountByStateData);
 const App: React.FC = () => {
 	return (
 		<>
@@ -141,6 +163,19 @@ const App: React.FC = () => {
 						</h2>
 						<div className="w-full h-96">
 							<SeasonTotalLineChart data={seasonTotalLineChartData} />
+						</div>
+					</div>
+				</div>
+				<div className="w-1/2 px-4 py-2">
+					<div className="rounded bg-white drop-shadow p-2">
+						<h2 className="font-bold text-slate-600">
+							Purchase Amounts (USD) By State
+						</h2>
+						<div className="w-full h-96">
+							<PurchaseAmountByStateChart
+								data={purchaseAmountByStateData}
+								geoJSON={stateData}
+							/>
 						</div>
 					</div>
 				</div>
